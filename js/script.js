@@ -165,5 +165,5 @@ function formatDate(dateString) {
 
 document.body.append(navbar(),container());
 window.onload = (event) => {
-  getNews("world");
+  getNews("home");
 };
