@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Open+Sans+Condensed:wght@700&family=Secular+One&display=swap');.nav-link{
+    cursor: pointer;
+}
+.card{
+    margin: 10px;
+}
+.navbar-brand{
+    font-family: 'New Rocker', cursive;
+}
+.nav-link{
+    font-family: 'Secular One', sans-serif;
+}
+.container{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: large;
+}
