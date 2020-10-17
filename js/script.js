@@ -1,3 +1,4 @@
+//Navbar
 function navbar(){
     var topics = ['home', 'world','politics','magazine', 'technology','science','health','sports','arts','fashion','food','travel'];
     var header = document.createElement('header');
@@ -49,14 +50,14 @@ function navbar(){
      return header;
    }
    
-
+//Container
 function container() {
   var container = document.createElement("div");
   container.className = "container";
   container.id = "data";
   return container;
 }
-
+//Fetching the news from api 
 async function getNews(type) {
   try {
     var data = await fetch(
@@ -72,7 +73,7 @@ async function getNews(type) {
     console.log(err);
   }
 }
-
+//Creating card
 async function createCard(type, json) {
   document.getElementById("data").innerHTML = "";
   var container = document.getElementById("data");
@@ -128,7 +129,7 @@ async function createCard(type, json) {
     imageDiv.className = "col-lg-4 col-sm-12";
 
     var img = document.createElement("img");
-    img.className = "card-img   imgStyle";
+    img.className = "card-img  ";
     img.src = json.results[i].multimedia[0].url;
     imageDiv.appendChild(img);
 
@@ -137,10 +138,11 @@ async function createCard(type, json) {
     card.append(row);
     col.append(card);
     rowDiv.append(col);
+    
   }
   container.append(rowDiv);
 }
-
+//Date formate
 function formatDate(dateString) {
   var months = [
     "January",
@@ -162,7 +164,7 @@ function formatDate(dateString) {
   console.log(date);
   return date;
 }
-
+//Appending all the data into html body
 document.body.append(navbar(),container());
 window.onload = (event) => {
   getNews("home");
